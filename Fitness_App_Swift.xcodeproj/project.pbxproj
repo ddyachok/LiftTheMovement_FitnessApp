@@ -13,6 +13,7 @@
 		5F0C561A25379CA400F9CEC2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C561925379CA400F9CEC2 /* HomeViewController.swift */; };
 		5F0C562325381E9100F9CEC2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C562225381E9100F9CEC2 /* Utilities.swift */; };
 		5F0F3E2E2573F318001F2A3E /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0F3E2D2573F318001F2A3E /* Images.swift */; };
+		5F0F3E5C25740CFA001F2A3E /* SessionTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0F3E5B25740CFA001F2A3E /* SessionTableViewHeaderCell.swift */; };
 		5F30409F255C37D90062C477 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F30409E255C37D90062C477 /* Exercise.swift */; };
 		5F3040A7255C47AF0062C477 /* SessionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3040A6255C47AF0062C477 /* SessionTableViewController.swift */; };
 		5F3040B6255C517F0062C477 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3040B5255C517F0062C477 /* SessionTableViewCell.swift */; };
@@ -21,6 +22,7 @@
 		5F71B7C3253B1540008AB0ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F71B7C2253B1540008AB0ED /* GoogleService-Info.plist */; };
 		5F71B7F6253B2B6C008AB0ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F71B7F5253B2B6C008AB0ED /* Constants.swift */; };
 		5F71B8BE253D8F97008AB0ED /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F71B8BD253D8F97008AB0ED /* UIView+Extention.swift */; };
+		5F72088D25741A0100BE74C6 /* ExerciseHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F72088C25741A0100BE74C6 /* ExerciseHeader.swift */; };
 		5F8DF8BB252EE329001DC845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DF8BA252EE329001DC845 /* AppDelegate.swift */; };
 		5F8DF8BD252EE329001DC845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DF8BC252EE329001DC845 /* SceneDelegate.swift */; };
 		5F8DF8BF252EE329001DC845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DF8BE252EE329001DC845 /* ViewController.swift */; };
@@ -66,6 +68,7 @@
 		5F0C561925379CA400F9CEC2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5F0C562225381E9100F9CEC2 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5F0F3E2D2573F318001F2A3E /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		5F0F3E5B25740CFA001F2A3E /* SessionTableViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableViewHeaderCell.swift; sourceTree = "<group>"; };
 		5F30409E255C37D90062C477 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		5F3040A6255C47AF0062C477 /* SessionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableViewController.swift; sourceTree = "<group>"; };
 		5F3040B5255C517F0062C477 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		5F71B7C2253B1540008AB0ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F71B7F5253B2B6C008AB0ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5F71B8BD253D8F97008AB0ED /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
+		5F72088C25741A0100BE74C6 /* ExerciseHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHeader.swift; sourceTree = "<group>"; };
 		5F8DF8B7252EE329001DC845 /* Fitness_App_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitness_App_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8DF8BA252EE329001DC845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8DF8BC252EE329001DC845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			children = (
 				5F3040A6255C47AF0062C477 /* SessionTableViewController.swift */,
 				5F3040B5255C517F0062C477 /* SessionTableViewCell.swift */,
+				5F0F3E5B25740CFA001F2A3E /* SessionTableViewHeaderCell.swift */,
 			);
 			path = Session;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				5F30409E255C37D90062C477 /* Exercise.swift */,
+				5F72088C25741A0100BE74C6 /* ExerciseHeader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -581,6 +587,7 @@
 				5F71B7F6253B2B6C008AB0ED /* Constants.swift in Sources */,
 				5F0C561025379C5B00F9CEC2 /* SignInViewController.swift in Sources */,
 				5F0C561A25379CA400F9CEC2 /* HomeViewController.swift in Sources */,
+				5F0F3E5C25740CFA001F2A3E /* SessionTableViewHeaderCell.swift in Sources */,
 				5F0C562325381E9100F9CEC2 /* Utilities.swift in Sources */,
 				5F30409F255C37D90062C477 /* Exercise.swift in Sources */,
 				5FE8329B254D9C6A0051D411 /* SettingsViewController.swift in Sources */,
@@ -589,6 +596,7 @@
 				5F3040A7255C47AF0062C477 /* SessionTableViewController.swift in Sources */,
 				5F71B8BE253D8F97008AB0ED /* UIView+Extention.swift in Sources */,
 				5F8DF8BD252EE329001DC845 /* SceneDelegate.swift in Sources */,
+				5F72088D25741A0100BE74C6 /* ExerciseHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

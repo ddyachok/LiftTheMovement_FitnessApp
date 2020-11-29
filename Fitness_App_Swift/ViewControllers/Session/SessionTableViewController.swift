@@ -11,9 +11,11 @@ class TableSessionViewController: UIViewController {
     
     var tableView = UITableView()
     var exercises: [Exercise] = []
+    var headers: [ExerciseHeader] = []
     
     struct Cells {
         static let exerciseCell = "SessionTableViewCell"
+        static let headerCell = "SessionTableViewHeaderCell"
     }
     
     
@@ -21,6 +23,7 @@ class TableSessionViewController: UIViewController {
         super.viewDidLoad()
         title = "Pancake stretch"
         exercises = fetchData()
+        headers = fetchHeaderData()
         configureSessionTableView()
     }
     
@@ -33,6 +36,7 @@ class TableSessionViewController: UIViewController {
         tableView.estimatedRowHeight = 1250
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(SessionTableViewCell.self, forCellReuseIdentifier: Cells.exerciseCell)
+        tableView.register(SessionTableViewHeaderCell.self, forCellReuseIdentifier: Cells.headerCell)
         
         tableView.pin(to: view)
     }
@@ -48,17 +52,28 @@ class TableSessionViewController: UIViewController {
 extension TableSessionViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (exercises.count)
+        return (exercises.count + headers.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        switch indexPath.section {
+        case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: Cells.exerciseCell) as! SessionTableViewCell
             let exercise = exercises[indexPath.row]
             cell.set(exercise: exercise)
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
-            
             return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: Cells.headerCell) as! SessionTableViewHeaderCell
+            let header = headers[indexPath.row]
+            cell.set(exerciseHeader: header)
+            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+            return cell
+        }
+            
+            
+            
         
     }
     
@@ -83,5 +98,26 @@ extension TableSessionViewController {
         
         
         return[exercise1, exercise2, exercise3, exercise4, exercise5, exercise6, exercise7, exercise8, exercise9]
+    }
+}
+
+extension TableSessionViewController {
+    func fetchHeaderData() -> [ExerciseHeader] {
+        let header1 = ExerciseHeader(sessionN: "PANCAKE STRETCH", logoImg: Images.lift_logo, logoTxt: "THE MOVEMENT", coachTxt: "Coach:", coachN: "Poppy", timeTxt: "Time:", timeNum: "7:30 am", descriptionTxt: """
+            The straddle pancake is useful for restoring pain-free balance to the hip and is vital for certain skill pursuits. This movement demonstrates full functional range of motion in the joint, and is necessary if you’re working towards mastering the press handstand. Even if the press to handstand isn’t your goal, everyone will feel the benefits of the pancake stretch.
+                                
+            In this post you will find a collection of movements that when performed consistently will help to resolve hip discomfort and provide you with a solid foundation to progress further with you hip mobility and compression. All exercises in this series should be performed as actively as possible, looking for connection and engagement throughout. This is not only a great routine for those looking to achieve the pancake but it will also help anyone to improve their squat.
+
+            Note that we suggest general rep ranges on each movement but not set structure. Training structure will vary from individual to individual so adjust the volume and intensity according to your ability or how you’re feeling that session. If you are new to this process we would recommend starting with 2 sets of each drill working through the exercises start to finish. If you find one drill particularly beneficial then spend more time on it, but please don’t avoid the difficult ones. They’re difficult because they need work! Work up from 2 to 3 sets as you progress.
+            """)
+            
+        let header2 = ExerciseHeader(sessionN: "PANCAKE STRETCH", logoImg: Images.lift_logo, logoTxt: "THE MOVEMENT", coachTxt: "Coach:", coachN: "Poppy",       timeTxt: "Time:", timeNum: "7:30 am", descriptionTxt: """
+                The straddle pancake is useful for restoring pain-free balance to the hip and is vital for certain skill pursuits. This movement demonstrates full functional range of motion in the joint, and is necessary if you’re working towards mastering the press handstand. Even if the press to handstand isn’t your goal, everyone will feel the benefits of the pancake stretch.
+                                    
+                In this post you will find a collection of movements that when performed consistently will help to resolve hip discomfort and provide you with a solid foundation to progress further with you hip mobility and compression. All exercises in this series should be performed as actively as possible, looking for connection and engagement throughout. This is not only a great routine for those looking to achieve the pancake but it will also help anyone to improve their squat.
+
+                Note that we suggest general rep ranges on each movement but not set structure. Training structure will vary from individual to individual so adjust the volume and intensity according to your ability or how you’re feeling that session. If you are new to this process we would recommend starting with 2 sets of each drill working through the exercises start to finish. If you find one drill particularly beneficial then spend more time on it, but please don’t avoid the difficult ones. They’re difficult because they need work! Work up from 2 to 3 sets as you progress.
+                """)
+        return [header1, header2]
     }
 }
