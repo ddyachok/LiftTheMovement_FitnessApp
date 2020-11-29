@@ -57,25 +57,25 @@ class SessionTableViewCell: UITableViewCell {
     }
     
     func configureExerciseNumber() {
-        exerciseNumber.font = UIFont(name: "AbelPro-Bold", size: 31)
+        exerciseNumber.font = UIFont.Abel().bold(with: 31)
     }
     
     func configureBodyPlacement() {
-        bodyPlacement.font = UIFont(name: "AbelPro-Bold", size: 20)
+        bodyPlacement.font = UIFont.Abel().bold(with: 20)
     }
     
     func configureBodyPlacementText() {
         bodyPlacementText.numberOfLines = 0
-        bodyPlacementText.font = UIFont(name: "Abel-Regular", size: 20)
+        bodyPlacementText.font = UIFont.Abel().regular(with: 20)
     }
     
     func configureMovement() {
-        movement.font = UIFont(name: "AbelPro-Bold", size: 20)
+        movement.font = UIFont.Abel().bold(with: 20)
     }
     
     func configureMovementText() {
         movementText.numberOfLines = 0
-        movementText.font = UIFont(name: "Abel-Regular", size: 20)
+        movementText.font = UIFont.Abel().regular(with: 20)
     }
     
     

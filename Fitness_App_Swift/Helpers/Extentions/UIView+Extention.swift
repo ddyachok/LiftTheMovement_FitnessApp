@@ -28,3 +28,14 @@ extension UIView {
     }
     
 }
+
+extension UIFont {
+    class Abel {
+        func regular (with size: CGFloat) -> UIFont? {
+            UIFont(name: "Abel-Regular", size: size)
+        }
+        func bold(with size: CGFloat) -> UIFont? {
+            UIFont(name: "AbelPro-Bold", size: size)
+        }
+    }
+}

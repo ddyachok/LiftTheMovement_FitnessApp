@@ -33,12 +33,10 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func switchDidChange(_ sender: UISwitch) {
-        if sender.isOn {
-            sessionDelegate?.settingsViewController(sessionImage: UIImage(named: "session_complete")!, sessionName: "SESSION COMPLETE")
-        }
-        else {
-            sessionDelegate?.settingsViewController(sessionImage: UIImage(named: "pancake_stretch")!, sessionName: "PANCAKE STRETCH")
-        }
+        let newImage = UIImage(named: sender.isOn ? "session_complete" : "pancake_stretch")
+        let newSessionName = sender.isOn ? "SESSION COMPLETE" : "PANCAKE STRETCH"
+        
+        sessionDelegate?.settingsViewController(sessionImage: newImage!, sessionName: newSessionName)
     }
     
     
