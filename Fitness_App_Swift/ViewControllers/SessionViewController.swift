@@ -10,7 +10,6 @@ import UIKit
 class SessionViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var sessionTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

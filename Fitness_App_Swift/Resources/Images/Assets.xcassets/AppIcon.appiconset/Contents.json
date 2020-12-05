@@ -11,11 +11,13 @@
       "size" : "20x20"
     },
     {
+      "filename" : "lift_logo.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "lift_logo-bigger-1.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
