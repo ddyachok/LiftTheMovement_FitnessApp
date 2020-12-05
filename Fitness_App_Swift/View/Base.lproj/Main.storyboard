@@ -295,7 +295,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syH-25-q9o">
-                                <rect key="frame" x="40" y="184" width="110.5" height="30"/>
+                                <rect key="frame" x="40" y="184" width="96" height="29"/>
                                 <fontDescription key="fontDescription" name="AbelPro-Bold" family="Abel Pro" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -331,34 +331,35 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SESSION STATUS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrT-20-5yS">
-                                <rect key="frame" x="40" y="274" width="164.5" height="23.5"/>
+                                <rect key="frame" x="40" y="273" width="129.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FONT SIZE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6y-Wm-OBD">
-                                <rect key="frame" x="40" y="337.5" width="101" height="23.5"/>
+                                <rect key="frame" x="40" y="378.5" width="80" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="814-46-iSg">
-                                <rect key="frame" x="353" y="337" width="76.5" height="24.5"/>
-                                <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="21"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8OG-yg-h7w">
+                                <rect key="frame" x="222" y="356" width="192" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="21o-2c-5d6"/>
+                                    <constraint firstAttribute="height" constant="70" id="wO3-Mw-Yim"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1rd-Yh-j7t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="c6y-Wm-OBD" firstAttribute="top" secondItem="PrT-20-5yS" secondAttribute="bottom" constant="40" id="6ew-8g-4Ga"/>
                             <constraint firstItem="syH-25-q9o" firstAttribute="leading" secondItem="1rd-Yh-j7t" secondAttribute="leading" constant="40" id="79e-Vh-hKY"/>
                             <constraint firstItem="c6y-Wm-OBD" firstAttribute="leading" secondItem="1rd-Yh-j7t" secondAttribute="leading" constant="40" id="BTN-G3-uFD"/>
+                            <constraint firstItem="c6y-Wm-OBD" firstAttribute="top" secondItem="PrT-20-5yS" secondAttribute="bottom" constant="80" id="BgT-cj-AAc"/>
                             <constraint firstItem="P8g-aY-Uaz" firstAttribute="top" secondItem="1rd-Yh-j7t" secondAttribute="top" constant="26" id="JPF-bX-Upg"/>
+                            <constraint firstItem="8OG-yg-h7w" firstAttribute="trailing" secondItem="1rd-Yh-j7t" secondAttribute="trailing" id="RmR-qx-gEB"/>
                             <constraint firstItem="SgM-8a-P9J" firstAttribute="top" secondItem="1rd-Yh-j7t" secondAttribute="top" constant="226" id="TJK-mI-utI"/>
                             <constraint firstItem="1rd-Yh-j7t" firstAttribute="trailing" secondItem="SgM-8a-P9J" secondAttribute="trailing" constant="18" id="Tdd-TR-YJC"/>
-                            <constraint firstItem="814-46-iSg" firstAttribute="top" secondItem="SgM-8a-P9J" secondAttribute="bottom" constant="36" id="Up5-Yw-oid"/>
                             <constraint firstItem="PrT-20-5yS" firstAttribute="leading" secondItem="1rd-Yh-j7t" secondAttribute="leading" constant="40" id="d1Z-UB-mha"/>
                             <constraint firstItem="PrT-20-5yS" firstAttribute="top" secondItem="syH-25-q9o" secondAttribute="bottom" constant="60" id="fMP-7N-EO3"/>
                             <constraint firstItem="P8g-aY-Uaz" firstAttribute="leading" secondItem="1rd-Yh-j7t" secondAttribute="leading" constant="20" id="jLh-1V-dc9"/>
@@ -366,12 +367,13 @@
                             <constraint firstItem="syH-25-q9o" firstAttribute="top" secondItem="P8g-aY-Uaz" secondAttribute="bottom" constant="79" id="pz8-aP-5Qp"/>
                             <constraint firstItem="Cke-kw-WW1" firstAttribute="top" secondItem="1rd-Yh-j7t" secondAttribute="top" constant="26" id="sqW-HW-xoY"/>
                             <constraint firstItem="Cke-kw-WW1" firstAttribute="centerX" secondItem="hjf-IG-feZ" secondAttribute="centerX" id="tLf-YH-BBJ"/>
-                            <constraint firstItem="814-46-iSg" firstAttribute="leading" secondItem="c6y-Wm-OBD" secondAttribute="trailing" constant="212" id="uri-FO-Gct"/>
+                            <constraint firstItem="8OG-yg-h7w" firstAttribute="top" secondItem="SgM-8a-P9J" secondAttribute="bottom" constant="55" id="yyD-vp-cMC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="laV-g7-itD"/>
                     <connections>
                         <outlet property="backButton" destination="P8g-aY-Uaz" id="dTf-dB-vjE"/>
+                        <outlet property="fontSizePickerView" destination="8OG-yg-h7w" id="xyh-8E-cyW"/>
                         <outlet property="statusSwitch" destination="SgM-8a-P9J" id="s53-6Q-054"/>
                     </connections>
                 </viewController>
@@ -545,24 +547,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9k0-0J-rtm" userLabel="(TextField)Stack View">
-                                <rect key="frame" x="40" y="242.5" width="334" height="152"/>
+                                <rect key="frame" x="40" y="242.5" width="334" height="153"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Nickname" textAlignment="natural" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="rlg-01-Wxo">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="38"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Email" textAlignment="natural" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="oYa-n7-52D">
-                                        <rect key="frame" x="0.0" y="57" width="334" height="38"/>
+                                        <rect key="frame" x="0.0" y="58" width="334" height="38"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-4f-yV1">
-                                        <rect key="frame" x="0.0" y="115" width="334" height="37"/>
+                                        <rect key="frame" x="0.0" y="116" width="334" height="37"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Abel-Regular" family="Abel" pointSize="22"/>
@@ -571,7 +573,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5h4-vM-mQI" userLabel="SignInButton">
-                                <rect key="frame" x="40" y="420" width="138" height="51"/>
+                                <rect key="frame" x="40" y="421" width="138" height="51"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="138" id="F6u-Hp-QjX"/>
@@ -1796,9 +1798,6 @@ Note that we suggest general rep ranges on each movement but not set structure. 
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

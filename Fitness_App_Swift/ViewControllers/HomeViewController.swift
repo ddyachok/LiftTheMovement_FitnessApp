@@ -43,10 +43,14 @@ class HomeViewController: UIViewController {
 }
 
 
-
 extension HomeViewController: SettingsViewControllerDelegate {
     func settingsViewController(sessionImage: UIImage, sessionName: String) {
         sessionImageView.image = sessionImage
         sessionLabel.text = sessionName
+    }
+}
+extension HomeViewController: SettingsViewControllerDelegateForPickerView {
+    func settingsViewControllerForPickerView(sessionNameFontSize: CGFloat) {
+        sessionLabel.font = sessionLabel.font.withSize(sessionNameFontSize)
     }
 }

@@ -57,20 +57,20 @@ extension TableSessionViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch indexPath.section {
-        case 1:
+//        switch indexPath.section {
+//        case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: Cells.exerciseCell) as! SessionTableViewCell
             let exercise = exercises[indexPath.row]
             cell.set(exercise: exercise)
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
             return cell
-        default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: Cells.headerCell) as! SessionTableViewHeaderCell
-            let header = headers[indexPath.row]
-            cell.set(exerciseHeader: header)
-            cell.selectionStyle = UITableViewCell.SelectionStyle.none
-            return cell
-        }
+//        default:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: Cells.headerCell) as! SessionTableViewHeaderCell
+//            let header = headers[indexPath.row]
+//            cell.set(exerciseHeader: header)
+//            cell.selectionStyle = UITableViewCell.SelectionStyle.none
+//            return cell
+//        }
             
             
             

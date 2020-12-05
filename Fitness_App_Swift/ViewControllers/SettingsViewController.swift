@@ -11,21 +11,36 @@ protocol SettingsViewControllerDelegate: class {
     func settingsViewController(sessionImage: UIImage, sessionName: String)
 }
 
-class SettingsViewController: UIViewController {
+protocol SettingsViewControllerDelegateForPickerView: class {
+    func settingsViewControllerForPickerView(sessionNameFontSize: CGFloat)
+}
 
+
+class SettingsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
     // MARK: - Variables
     
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var statusSwitch: UISwitch!
+    @IBOutlet weak var fontSizePickerView: UIPickerView!
     
     var HomeViewController: HomeViewController?
     var sessionDelegate: SettingsViewControllerDelegate!
+    var sessionFontSizeDelegate: SettingsViewControllerDelegateForPickerView!
+    
+    let fontSizePickerValues = ["Small", "Medium", "Large"]
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Settings"
+        
+        
+        fontSizePickerView.delegate = self
+        fontSizePickerView.dataSource = self
+        fontSizePickerView.selectRow(1, inComponent: 0, animated: true)
     }
     
     @IBAction func backTapped(_ sender: Any) {
@@ -39,5 +54,29 @@ class SettingsViewController: UIViewController {
         sessionDelegate?.settingsViewController(sessionImage: newImage!, sessionName: newSessionName)
     }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return fontSizePickerValues.count
+    }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return fontSizePickerValues[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch row {
+        case 0:
+            sessionFontSizeDelegate?.settingsViewControllerForPickerView(sessionNameFontSize: 21.0)
+        case 1:
+            sessionFontSizeDelegate?.settingsViewControllerForPickerView(sessionNameFontSize: 27.0)
+        case 2:
+            sessionFontSizeDelegate?.settingsViewControllerForPickerView(sessionNameFontSize: 31.0)
+        default:
+            break
+        }
+    }
+
 }
