@@ -445,7 +445,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SZ-Yk-0vN">
-                                <rect key="frame" x="367" y="70" width="27" height="26"/>
+                                <rect key="frame" x="362" y="44" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="aRZ-Vf-jMx"/>
+                                    <constraint firstAttribute="height" constant="52" id="eM2-Nb-kOh"/>
+                                </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
                                     <imageReference key="image" image="gear" catalog="system" symbolScale="large"/>
@@ -454,22 +458,39 @@
                                     <action selector="settingsTapped:" destination="gSk-ul-mLj" eventType="touchUpInside" id="Cu6-B9-HRB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HG-Dx-jir" userLabel="sideMenuButton">
+                                <rect key="frame" x="0.0" y="44" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="mkc-Yv-hSp"/>
+                                    <constraint firstAttribute="width" constant="52" id="sSm-FG-RoP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="line.horizontal.3" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="sideMenuTapped:" destination="gSk-ul-mLj" eventType="touchUpInside" id="rF0-uN-SEm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pwY-SN-QbY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="HomeVC"/>
                         <constraints>
+                            <constraint firstItem="7SZ-Yk-0vN" firstAttribute="top" secondItem="pwY-SN-QbY" secondAttribute="top" id="Bha-62-Jgf"/>
                             <constraint firstItem="PjM-7a-sE2" firstAttribute="top" secondItem="jeI-pC-JQ0" secondAttribute="bottom" constant="40" id="Dfm-eM-lHR"/>
                             <constraint firstItem="rqO-ex-JrF" firstAttribute="top" secondItem="pwY-SN-QbY" secondAttribute="top" constant="70" id="Gpe-jb-0gi"/>
                             <constraint firstItem="kUt-YC-J5o" firstAttribute="centerX" secondItem="rqO-ex-JrF" secondAttribute="centerX" id="GwR-Nu-8we"/>
                             <constraint firstItem="wMx-HR-P8Z" firstAttribute="centerX" secondItem="WxH-f9-rzh" secondAttribute="centerX" id="P1H-sM-NYu"/>
-                            <constraint firstItem="pwY-SN-QbY" firstAttribute="trailing" secondItem="7SZ-Yk-0vN" secondAttribute="trailing" constant="20" id="RkR-eJ-ijo"/>
+                            <constraint firstItem="8HG-Dx-jir" firstAttribute="leading" secondItem="pwY-SN-QbY" secondAttribute="leading" id="PAl-Vd-jTM"/>
                             <constraint firstItem="wMx-HR-P8Z" firstAttribute="top" secondItem="rqO-ex-JrF" secondAttribute="bottom" constant="70" id="VkK-wX-yNx"/>
+                            <constraint firstItem="8HG-Dx-jir" firstAttribute="top" secondItem="pwY-SN-QbY" secondAttribute="top" id="Wk0-Wr-1Bc"/>
                             <constraint firstItem="O0R-f8-n7f" firstAttribute="top" secondItem="wMx-HR-P8Z" secondAttribute="bottom" constant="40" id="Y4N-bs-gdF"/>
-                            <constraint firstItem="7SZ-Yk-0vN" firstAttribute="top" secondItem="pwY-SN-QbY" secondAttribute="top" constant="26" id="jDE-HM-pCR"/>
                             <constraint firstItem="PjM-7a-sE2" firstAttribute="centerX" secondItem="WxH-f9-rzh" secondAttribute="centerX" id="leG-Qn-pR1"/>
                             <constraint firstItem="O0R-f8-n7f" firstAttribute="centerX" secondItem="WxH-f9-rzh" secondAttribute="centerX" id="mKC-rM-jet"/>
                             <constraint firstItem="rqO-ex-JrF" firstAttribute="leading" secondItem="pwY-SN-QbY" secondAttribute="leading" constant="16" id="pC2-yC-3m5"/>
+                            <constraint firstItem="7SZ-Yk-0vN" firstAttribute="trailing" secondItem="pwY-SN-QbY" secondAttribute="trailing" id="qFz-cZ-2YW"/>
                             <constraint firstItem="kUt-YC-J5o" firstAttribute="centerY" secondItem="wMx-HR-P8Z" secondAttribute="centerY" id="rCk-nH-mzg"/>
                             <constraint firstItem="jeI-pC-JQ0" firstAttribute="centerX" secondItem="WxH-f9-rzh" secondAttribute="centerX" id="t21-K6-GcQ"/>
                             <constraint firstItem="pwY-SN-QbY" firstAttribute="trailing" secondItem="rqO-ex-JrF" secondAttribute="trailing" constant="16" id="tCz-gj-AtB"/>
@@ -483,6 +504,7 @@
                         <outlet property="sessionLabel" destination="kUt-YC-J5o" id="gJa-SY-4Ec"/>
                         <outlet property="sessionTitleLabel" destination="rqO-ex-JrF" id="HuA-Tb-pBJ"/>
                         <outlet property="settingsButton" destination="7SZ-Yk-0vN" id="Yj6-M5-sag"/>
+                        <outlet property="sideMenuButton" destination="8HG-Dx-jir" id="U4a-4R-3Uy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bie-Md-lXb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -681,7 +703,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O8G-Ci-tef">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="10029.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="10094.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZP-lM-wCZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
@@ -774,16 +796,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqC-Yi-uJ9">
-                                                <rect key="frame" x="0.0" y="240" width="414" height="990.5"/>
+                                                <rect key="frame" x="0.0" y="240" width="414" height="1055.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akN-2a-Xxy">
-                                                        <rect key="frame" x="16" y="912" width="382" height="38.5"/>
+                                                        <rect key="frame" x="16" y="977" width="382" height="38.5"/>
                                                         <fontDescription key="fontDescription" name="AbelPro-Bold" family="Abel Pro" pointSize="31"/>
                                                         <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0U-EQ-K6L">
-                                                        <rect key="frame" x="8" y="20" width="398" height="832"/>
+                                                        <rect key="frame" x="8" y="20" width="398" height="897"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <string key="text">The straddle pancake is useful for restoring pain-free balance to the hip and is vital for certain skill pursuits. This movement demonstrates full functional range of motion in the joint, and is necessary if you’re working towards mastering the press handstand. Even if the press to handstand isn’t your goal, everyone will feel the benefits of the pancake stretch.
 
@@ -808,7 +830,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOh-Jv-kNg">
-                                                <rect key="frame" x="0.0" y="1230.5" width="414" height="630"/>
+                                                <rect key="frame" x="0.0" y="1295.5" width="414" height="630"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_ex1_2" translatesAutoresizingMaskIntoConstraints="NO" id="57j-5s-iqV">
                                                         <rect key="frame" x="215" y="0.0" width="185" height="185"/>
@@ -856,7 +878,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38k-z6-kpV">
-                                                <rect key="frame" x="0.0" y="1860.5" width="414" height="500"/>
+                                                <rect key="frame" x="0.0" y="1925.5" width="414" height="500"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1a-N5-lub">
                                                         <rect key="frame" x="16" y="20" width="130.5" height="25"/>
@@ -902,7 +924,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pb6-Xw-gwE" userLabel="exercise">
-                                                <rect key="frame" x="0.0" y="2360.5" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="2425.5" width="414" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUh-Ic-0Sw">
                                                         <rect key="frame" x="16" y="40" width="382" height="48"/>
@@ -920,7 +942,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXl-C7-AwG" userLabel="images &amp; body placement">
-                                                <rect key="frame" x="0.0" y="2488.5" width="414" height="520"/>
+                                                <rect key="frame" x="0.0" y="2553.5" width="414" height="520"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_ex2_2" translatesAutoresizingMaskIntoConstraints="NO" id="i6m-dg-BTV">
                                                         <rect key="frame" x="215" y="0.0" width="185" height="185"/>
@@ -971,7 +993,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6X1-tg-W44" userLabel="movement">
-                                                <rect key="frame" x="0.0" y="3008.5" width="414" height="400"/>
+                                                <rect key="frame" x="0.0" y="3073.5" width="414" height="400"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6L-Pt-eBp">
                                                         <rect key="frame" x="16" y="20" width="130.5" height="25"/>
@@ -1016,7 +1038,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Js-hC-86A">
-                                                <rect key="frame" x="0.0" y="3408.5" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="3473.5" width="414" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ja6-qp-TKa">
                                                         <rect key="frame" x="16" y="40" width="382" height="48"/>
@@ -1034,7 +1056,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2CQ-8e-9nW">
-                                                <rect key="frame" x="0.0" y="3536.5" width="414" height="520"/>
+                                                <rect key="frame" x="0.0" y="3601.5" width="414" height="520"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_ex3_2" translatesAutoresizingMaskIntoConstraints="NO" id="FuY-h2-c7h">
                                                         <rect key="frame" x="215" y="0.0" width="185" height="185"/>
@@ -1085,7 +1107,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-AZ-O9W">
-                                                <rect key="frame" x="0.0" y="4056.5" width="414" height="570"/>
+                                                <rect key="frame" x="0.0" y="4121.5" width="414" height="570"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKg-Qj-sJE">
                                                         <rect key="frame" x="16" y="20" width="130.5" height="25"/>
@@ -1117,7 +1139,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udP-lp-lTg" userLabel="exercise">
-                                                <rect key="frame" x="0.0" y="4626.5" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="4691.5" width="414" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE 4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-vC-eeO">
                                                         <rect key="frame" x="16" y="40" width="382" height="48"/>
@@ -1135,7 +1157,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xth-gS-sx1" userLabel="images &amp; body placement">
-                                                <rect key="frame" x="0.0" y="4754.5" width="414" height="390"/>
+                                                <rect key="frame" x="0.0" y="4819.5" width="414" height="390"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_ex4_2" translatesAutoresizingMaskIntoConstraints="NO" id="prw-dz-gbI">
                                                         <rect key="frame" x="215" y="0.0" width="185" height="185"/>
@@ -1186,7 +1208,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKu-hh-3K3" userLabel="movement">
-                                                <rect key="frame" x="0.0" y="5144.5" width="414" height="360"/>
+                                                <rect key="frame" x="0.0" y="5209.5" width="414" height="360"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAe-s6-EKq">
                                                         <rect key="frame" x="16" y="20" width="130.5" height="25"/>
@@ -1218,7 +1240,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkT-np-nuY" userLabel="exercise">
-                                                <rect key="frame" x="0.0" y="5504.5" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="5569.5" width="414" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecy-Jx-w5U">
                                                         <rect key="frame" x="16" y="40" width="382" height="48"/>
@@ -1236,7 +1258,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4k-w5-uqd" userLabel="images &amp; body placement">
-                                                <rect key="frame" x="0.0" y="5632.5" width="414" height="410"/>
+                                                <rect key="frame" x="0.0" y="5697.5" width="414" height="410"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_ex5_2" translatesAutoresizingMaskIntoConstraints="NO" id="yNM-NA-3ox">
                                                         <rect key="frame" x="215" y="0.0" width="185" height="185"/>
@@ -1287,7 +1309,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLk-jO-2xo" userLabel="movement">
-                                                <rect key="frame" x="0.0" y="6042.5" width="414" height="390"/>
+                                                <rect key="frame" x="0.0" y="6107.5" width="414" height="390"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Af-Yc-qIR">
                                                         <rect key="frame" x="16" y="20" width="130.5" height="25"/>
@@ -1319,7 +1341,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOe-wX-NIW" userLabel="exercise">
-                                                <rect key="frame" x="0.0" y="6432.5" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="6497.5" width="414" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE 6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roJ-Yg-08x">
                                                         <rect key="frame" x="16" y="40" width="382" height="48"/>
@@ -1337,7 +1359,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHD-Af-fcR" userLabel="images &amp; body placement">
-                                                <rect key="frame" x="0.0" y="6560.5" width="414" height="390"/>
+                                                <rect key="frame" x="0.0" y="6625.5" width="414" height="390"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_ex6_2" translatesAutoresizingMaskIntoConstraints="NO" id="gnu-Wr-FHT">
                                                         <rect key="frame" x="215" y="0.0" width="185" height="185"/>
@@ -1388,7 +1410,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zsv-AE-XHZ" userLabel="movement">
-                                                <rect key="frame" x="0.0" y="6950.5" width="414" height="460"/>
+                                                <rect key="frame" x="0.0" y="7015.5" width="414" height="460"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMw-ww-yuN">
                                                         <rect key="frame" x="16" y="20" width="130.5" height="25"/>
@@ -1420,7 +1442,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5fR-cf-82F" userLabel="exercise">
-                                                <rect key="frame" x="0.0" y="7410.5" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="7475.5" width="414" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE 7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fM-Od-ziF">
                                                         <rect key="frame" x="16" y="40" width="382" height="48"/>
@@ -1438,7 +1460,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRU-vL-ELy" userLabel="images &amp; body placement">
-                                                <rect key="frame" x="0.0" y="7538.5" width="414" height="480"/>
+                                                <rect key="frame" x="0.0" y="7603.5" width="414" height="480"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_ex7_2" translatesAutoresizingMaskIntoConstraints="NO" id="TiK-Bg-D2O">
                                                         <rect key="frame" x="215" y="0.0" width="185" height="185"/>
@@ -1486,7 +1508,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckj-Oq-l0l" userLabel="movement">
-                                                <rect key="frame" x="0.0" y="8018.5" width="414" height="200"/>
+                                                <rect key="frame" x="0.0" y="8083.5" width="414" height="200"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4yK-uG-LYx">
                                                         <rect key="frame" x="16" y="20" width="130.5" height="25"/>
@@ -1517,7 +1539,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfx-vH-V1M" userLabel="exercise">
-                                                <rect key="frame" x="0.0" y="8218.5" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="8283.5" width="414" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE 8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi0-k3-xvE">
                                                         <rect key="frame" x="16" y="40" width="382" height="48"/>
@@ -1535,7 +1557,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIL-ep-Nx3" userLabel="images &amp; body placement">
-                                                <rect key="frame" x="0.0" y="8346.5" width="414" height="395"/>
+                                                <rect key="frame" x="0.0" y="8411.5" width="414" height="395"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_ex8_2" translatesAutoresizingMaskIntoConstraints="NO" id="Nl9-gM-cgJ">
                                                         <rect key="frame" x="215" y="0.0" width="185" height="185"/>
@@ -1586,7 +1608,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5p-7s-39M" userLabel="movement">
-                                                <rect key="frame" x="0.0" y="8741.5" width="414" height="340"/>
+                                                <rect key="frame" x="0.0" y="8806.5" width="414" height="340"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUO-AL-2Cd">
                                                         <rect key="frame" x="16" y="20" width="130.5" height="25"/>
@@ -1617,7 +1639,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Isx-UK-zqF" userLabel="exercise">
-                                                <rect key="frame" x="0.0" y="9081.5" width="414" height="128"/>
+                                                <rect key="frame" x="0.0" y="9146.5" width="414" height="128"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE 9" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egd-lC-TNn">
                                                         <rect key="frame" x="16" y="40" width="382" height="48"/>
@@ -1635,7 +1657,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M6N-dp-gtd" userLabel="images &amp; body placement">
-                                                <rect key="frame" x="0.0" y="9209.5" width="414" height="480"/>
+                                                <rect key="frame" x="0.0" y="9274.5" width="414" height="480"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pancake_ex9_2" translatesAutoresizingMaskIntoConstraints="NO" id="JEf-qZ-xgN">
                                                         <rect key="frame" x="215" y="0.0" width="185" height="185"/>
@@ -1682,7 +1704,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5j5-fh-TVH" userLabel="movement">
-                                                <rect key="frame" x="0.0" y="9689.5" width="414" height="340"/>
+                                                <rect key="frame" x="0.0" y="9754.5" width="414" height="340"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Movement:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugd-xW-n42">
                                                         <rect key="frame" x="16" y="20" width="130.5" height="25"/>
@@ -1770,6 +1792,7 @@ Note that we suggest general rep ranges on each movement but not set structure. 
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="left-arrow" width="504" height="512"/>
         <image name="lift_logo" width="188" height="76"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="login_img" width="956" height="2068"/>
         <image name="pancake_ex1" width="1258" height="1258"/>
         <image name="pancake_ex1_2" width="1258" height="1258"/>

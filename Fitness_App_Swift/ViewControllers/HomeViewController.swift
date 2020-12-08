@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HomeViewControllerDelegate {
+    func toggleMenu()
+}
+
 class HomeViewController: UIViewController {
 
     // MARK: - Variables
@@ -16,7 +20,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var sessionImageView: UIImageView!
     @IBOutlet weak var moreInfoButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
-        
+    @IBOutlet weak var sideMenuButton: UIButton!
+    
+    var delegate: HomeViewControllerDelegate?
     
     // MARK: - Lifecycle
     
@@ -35,9 +41,10 @@ class HomeViewController: UIViewController {
         present(settingsVC, animated: true, completion: nil)
     }
     
-    @IBAction func moreInfoTapped(_ sender: Any) {
-        let tableSessionVC = storyboard?.instantiateViewController(withIdentifier: "TableSessionVC") as! TableSessionViewController
-        present(tableSessionVC, animated: true, completion: nil)
+    
+    @IBAction func sideMenuTapped(_ sender: UIButton) {
+        delegate?.toggleMenu()
+        print("123")
     }
     
 }

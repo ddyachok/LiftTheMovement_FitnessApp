@@ -13,7 +13,7 @@ target 'Fitness_App_Swift' do
     pod 'Firebase/Core'
     pod 'Firebase/Firestore'
     pod 'FirebaseFirestoreSwift'
-
+    
   target 'Fitness_App_SwiftTests' do
     inherit! :search_paths
     # Pods for testing
