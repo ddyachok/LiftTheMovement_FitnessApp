@@ -67,7 +67,6 @@ class SideMenuContainerViewController: UIViewController, HomeViewControllerDeleg
     // MARK: HomeViewControllerDelegate
     
     func toggleMenu() {
-        print("toggleMenu func executed")
         configureSideMenuViewController()
         isUnfolded = !isUnfolded
         showSideMenuViewController(doFolding: isUnfolded)

@@ -44,7 +44,6 @@ class HomeViewController: UIViewController {
     
     @IBAction func sideMenuTapped(_ sender: UIButton) {
         delegate?.toggleMenu()
-        print("123")
     }
     
 }
