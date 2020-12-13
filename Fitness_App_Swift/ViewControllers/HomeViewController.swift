@@ -38,6 +38,7 @@ class HomeViewController: UIViewController {
     @IBAction func settingsTapped(_ sender: Any) {
         let settingsVC = storyboard?.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsViewController
         settingsVC.sessionDelegate = self
+        settingsVC.sessionFontSizeDelegate = self
         present(settingsVC, animated: true, completion: nil)
     }
     

@@ -48,6 +48,8 @@ class SessionTableViewCell: UITableViewCell {
     
     func set(exercise: Exercise) {
         exerciseNumber.text = exercise.exerciseNum
+//        exerciseImageView_1.image = UIImage.init(named: exercise.image1)
+//        exerciseImageView_2.image = UIImage.init(named: exercise.image2)
         exerciseImageView_1.image = exercise.image1
         exerciseImageView_2.image = exercise.image2
         bodyPlacement.text = exercise.bodyPl

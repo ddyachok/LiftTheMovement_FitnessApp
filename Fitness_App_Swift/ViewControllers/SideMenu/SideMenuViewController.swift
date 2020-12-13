@@ -7,9 +7,17 @@
 
 import UIKit
 
+protocol SideMenuViewControllerDelegate {
+    func toggleMenu()
+    func showSideMenuViewController(doFolding: Bool)
+}
+
 class SideMenuViewController: UIViewController {
     
     var sideMenuItemsTableV: UITableView!
+    var sideMenuModel: [SideMenuModel] = []
+    var delegate: SideMenuViewControllerDelegate?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +55,51 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let sideMenuModel = SideMenuModel(rawValue: indexPath.row)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mapVC = storyBoard.instantiateViewController(withIdentifier: "MapVC") as! MapViewController
+        mapVC.modalPresentationStyle = .fullScreen
+        
+        if sideMenuModel?.description == "Home" {
+            delegate?.showSideMenuViewController(doFolding: true)
+            print("Home tapped")
+        }
+        if sideMenuModel?.description == "Exercises" {
+            delegate?.toggleMenu()
+            print("Exercises tapped")
+        }
+        if sideMenuModel?.description == "Profile" {
+            delegate?.toggleMenu()
+            print("Profile tapped")
+        }
+        if sideMenuModel?.description == "About" {
+            delegate?.toggleMenu()
+            presentVC(mapVC)
+            print("About tapped")
+        }
+        
+    }
+    
+    func presentVC(_ viewControllerToPresent: UIViewController) {
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromRight
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        self.view.window!.layer.add(transition, forKey: kCATransition)
+
+        present(viewControllerToPresent, animated: false)
+    }
+
+    func dismissVC() {
+        let transition = CATransition()
+        transition.duration = 0.25
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        self.view.window!.layer.add(transition, forKey: kCATransition)
+
+        dismiss(animated: false)
     }
     
 }

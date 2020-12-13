@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = SideMenuContainerViewController()
+        window?.rootViewController = UINavigationController(rootViewController: SideMenuContainerViewController())
+//        window?.rootViewController = SideMenuContainerViewController()
         
         return true
     }

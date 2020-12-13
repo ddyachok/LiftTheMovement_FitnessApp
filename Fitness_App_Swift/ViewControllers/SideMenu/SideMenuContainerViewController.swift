@@ -16,6 +16,7 @@ class SideMenuContainerViewController: UIViewController, HomeViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         configureHomeViewController()
     }
     
@@ -45,7 +46,7 @@ class SideMenuContainerViewController: UIViewController, HomeViewControllerDeleg
                            initialSpringVelocity: 0,
                            options: .curveEaseInOut,
                            animations: {
-                            self.controller.view.frame.origin.x = self.controller.view.frame.width - 140
+                            self.controller.view.frame.origin.x = self.controller.view.frame.width - 240
                            }) { (finished) in
  
                         }
@@ -70,6 +71,15 @@ class SideMenuContainerViewController: UIViewController, HomeViewControllerDeleg
         configureSideMenuViewController()
         isUnfolded = !isUnfolded
         showSideMenuViewController(doFolding: isUnfolded)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     
