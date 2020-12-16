@@ -25,6 +25,8 @@
 		5F71B7C3253B1540008AB0ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F71B7C2253B1540008AB0ED /* GoogleService-Info.plist */; };
 		5F71B7F6253B2B6C008AB0ED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F71B7F5253B2B6C008AB0ED /* Constants.swift */; };
 		5F71B8BE253D8F97008AB0ED /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F71B8BD253D8F97008AB0ED /* UIView+Extention.swift */; };
+		5F8B0CCA258A75C500AAEAAF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B0CC9258A75C500AAEAAF /* ProfileViewController.swift */; };
+		5F8B0CCF258A78FE00AAEAAF /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B0CCE258A78FE00AAEAAF /* ExercisesViewController.swift */; };
 		5F8DF8BB252EE329001DC845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DF8BA252EE329001DC845 /* AppDelegate.swift */; };
 		5F8DF8BD252EE329001DC845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DF8BC252EE329001DC845 /* SceneDelegate.swift */; };
 		5F8DF8BF252EE329001DC845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DF8BE252EE329001DC845 /* ViewController.swift */; };
@@ -85,6 +87,8 @@
 		5F71B7C2253B1540008AB0ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F71B7F5253B2B6C008AB0ED /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5F71B8BD253D8F97008AB0ED /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
+		5F8B0CC9258A75C500AAEAAF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5F8B0CCE258A78FE00AAEAAF /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		5F8DF8B7252EE329001DC845 /* Fitness_App_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitness_App_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8DF8BA252EE329001DC845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8DF8BC252EE329001DC845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				5F321D8F2540AE7500ACD0B2 /* SessionViewController.swift */,
 				5FE8329A254D9C6A0051D411 /* SettingsViewController.swift */,
 				5FE404B725868DF6007F4F67 /* MapViewController.swift */,
+				5F8B0CC9258A75C500AAEAAF /* ProfileViewController.swift */,
+				5F8B0CCE258A78FE00AAEAAF /* ExercisesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -608,6 +614,7 @@
 				5F71B7BE25384572008AB0ED /* ChooseOptionViewController.swift in Sources */,
 				5F0F3E2E2573F318001F2A3E /* Images.swift in Sources */,
 				5F0C5608253746F100F9CEC2 /* WhiteButton.swift in Sources */,
+				5F8B0CCA258A75C500AAEAAF /* ProfileViewController.swift in Sources */,
 				5F8DF8BB252EE329001DC845 /* AppDelegate.swift in Sources */,
 				5F6EC8422582260E00416502 /* SessionDataLoader.swift in Sources */,
 				5F71B7F6253B2B6C008AB0ED /* Constants.swift in Sources */,
@@ -625,6 +632,7 @@
 				5F3040A7255C47AF0062C477 /* SessionTableViewController.swift in Sources */,
 				5F71B8BE253D8F97008AB0ED /* UIView+Extention.swift in Sources */,
 				5F8DF8BD252EE329001DC845 /* SceneDelegate.swift in Sources */,
+				5F8B0CCF258A78FE00AAEAAF /* ExercisesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

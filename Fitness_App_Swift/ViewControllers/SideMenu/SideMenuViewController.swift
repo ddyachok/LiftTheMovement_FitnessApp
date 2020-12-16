@@ -59,23 +59,22 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let mapVC = storyBoard.instantiateViewController(withIdentifier: "MapVC") as! MapViewController
         mapVC.modalPresentationStyle = .fullScreen
+        let profileVC = storyBoard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+        profileVC.modalPresentationStyle = .fullScreen
+        let exercisesVC = storyBoard.instantiateViewController(withIdentifier: "ExercisesVC") as! ExercisesViewController
+        exercisesVC.modalPresentationStyle = .fullScreen
         
         if sideMenuModel?.description == "Home" {
             delegate?.showSideMenuViewController(doFolding: true)
-            print("Home tapped")
         }
         if sideMenuModel?.description == "Exercises" {
-            delegate?.toggleMenu()
-            print("Exercises tapped")
+            presentVC(exercisesVC)
         }
         if sideMenuModel?.description == "Profile" {
-            delegate?.toggleMenu()
-            print("Profile tapped")
+            presentVC(profileVC)
         }
         if sideMenuModel?.description == "About" {
-            delegate?.toggleMenu()
             presentVC(mapVC)
-            print("About tapped")
         }
         
     }

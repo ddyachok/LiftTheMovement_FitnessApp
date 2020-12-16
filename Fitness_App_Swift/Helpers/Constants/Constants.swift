@@ -14,7 +14,9 @@ struct Constants {
         static let sessionViewController = "SessionVC"
         static let TableSessionViewController = "TableSessionVC"
         static let settingsViewController = "SettingsVC"
-        static let mapViewController = "MapVC"
+        static let aboutViewController = "MapVC"
+        static let profileViewController = "ProfileVC"
+        static let exercisesViewController = "ExercisesVC"
     }
     
 }
