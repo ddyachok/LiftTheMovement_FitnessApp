@@ -17,6 +17,7 @@ struct Constants {
         static let aboutViewController = "MapVC"
         static let profileViewController = "ProfileVC"
         static let exercisesViewController = "ExercisesVC"
+        static let coachesViewController = "CoachesVC"
     }
     
 }

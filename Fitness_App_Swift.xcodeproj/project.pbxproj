@@ -27,6 +27,9 @@
 		5F71B8BE253D8F97008AB0ED /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F71B8BD253D8F97008AB0ED /* UIView+Extention.swift */; };
 		5F8B0CCA258A75C500AAEAAF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B0CC9258A75C500AAEAAF /* ProfileViewController.swift */; };
 		5F8B0CCF258A78FE00AAEAAF /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B0CCE258A78FE00AAEAAF /* ExercisesViewController.swift */; };
+		5F8B0CD7258A991600AAEAAF /* Coaches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B0CD6258A991600AAEAAF /* Coaches.swift */; };
+		5F8B0CDD258A9E9800AAEAAF /* coaches.json in Resources */ = {isa = PBXBuildFile; fileRef = 5F8B0CDC258A9E9800AAEAAF /* coaches.json */; };
+		5F8B0CED258A9F5000AAEAAF /* CoachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B0CEC258A9F5000AAEAAF /* CoachesViewController.swift */; };
 		5F8DF8BB252EE329001DC845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DF8BA252EE329001DC845 /* AppDelegate.swift */; };
 		5F8DF8BD252EE329001DC845 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DF8BC252EE329001DC845 /* SceneDelegate.swift */; };
 		5F8DF8BF252EE329001DC845 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DF8BE252EE329001DC845 /* ViewController.swift */; };
@@ -89,6 +92,9 @@
 		5F71B8BD253D8F97008AB0ED /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		5F8B0CC9258A75C500AAEAAF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5F8B0CCE258A78FE00AAEAAF /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
+		5F8B0CD6258A991600AAEAAF /* Coaches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coaches.swift; sourceTree = "<group>"; };
+		5F8B0CDC258A9E9800AAEAAF /* coaches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coaches.json; sourceTree = "<group>"; };
+		5F8B0CEC258A9F5000AAEAAF /* CoachesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachesViewController.swift; sourceTree = "<group>"; };
 		5F8DF8B7252EE329001DC845 /* Fitness_App_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitness_App_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8DF8BA252EE329001DC845 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8DF8BC252EE329001DC845 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,16 +152,11 @@
 		5F0C561E25379CBB00F9CEC2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5F8B0CE1258A9F1700AAEAAF /* Home */,
 				5F94C3F3257EB6FF00B68960 /* SideMenu */,
 				5F3040B1255C51160062C477 /* SigningIn */,
 				5F0D93BF2565C19200B48887 /* Session */,
 				5F8DF8BE252EE329001DC845 /* ViewController.swift */,
-				5F0C561925379CA400F9CEC2 /* HomeViewController.swift */,
-				5F321D8F2540AE7500ACD0B2 /* SessionViewController.swift */,
-				5FE8329A254D9C6A0051D411 /* SettingsViewController.swift */,
-				5FE404B725868DF6007F4F67 /* MapViewController.swift */,
-				5F8B0CC9258A75C500AAEAAF /* ProfileViewController.swift */,
-				5F8B0CCE258A78FE00AAEAAF /* ExercisesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -175,7 +176,6 @@
 			children = (
 				5F3040A6255C47AF0062C477 /* SessionTableViewController.swift */,
 				5F3040B5255C517F0062C477 /* SessionTableViewCell.swift */,
-				5F6EC83C2582236C00416502 /* sessions.json */,
 				5F6EC8412582260E00416502 /* SessionDataLoader.swift */,
 			);
 			path = Session;
@@ -265,6 +265,7 @@
 			children = (
 				5F30409E255C37D90062C477 /* Exercise.swift */,
 				5F6EC8242580E66100416502 /* SideMenuModel.swift */,
+				5F8B0CD6258A991600AAEAAF /* Coaches.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -277,6 +278,37 @@
 				5F71B7BD25384572008AB0ED /* ChooseOptionViewController.swift */,
 			);
 			path = SigningIn;
+			sourceTree = "<group>";
+		};
+		5F8B0CDB258A9A0200AAEAAF /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				5F6EC83C2582236C00416502 /* sessions.json */,
+				5F8B0CDC258A9E9800AAEAAF /* coaches.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		5F8B0CE1258A9F1700AAEAAF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5F8B0CE5258A9F2600AAEAAF /* SideMenuComponents */,
+				5F0C561925379CA400F9CEC2 /* HomeViewController.swift */,
+				5F321D8F2540AE7500ACD0B2 /* SessionViewController.swift */,
+				5FE8329A254D9C6A0051D411 /* SettingsViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5F8B0CE5258A9F2600AAEAAF /* SideMenuComponents */ = {
+			isa = PBXGroup;
+			children = (
+				5FE404B725868DF6007F4F67 /* MapViewController.swift */,
+				5F8B0CC9258A75C500AAEAAF /* ProfileViewController.swift */,
+				5F8B0CCE258A78FE00AAEAAF /* ExercisesViewController.swift */,
+				5F8B0CEC258A9F5000AAEAAF /* CoachesViewController.swift */,
+			);
+			path = SideMenuComponents;
 			sourceTree = "<group>";
 		};
 		5F8DF8AE252EE329001DC845 = {
@@ -304,6 +336,7 @@
 		5F8DF8B9252EE329001DC845 /* Fitness_App_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				5F8B0CDB258A9A0200AAEAAF /* JSON */,
 				5F0F3E272573F1E5001F2A3E /* AppDelegate */,
 				5F30409D255C37C60062C477 /* Model */,
 				5F0F3E282573F1F8001F2A3E /* View */,
@@ -476,6 +509,7 @@
 			files = (
 				5FB3E62725372DBB001B6E8D /* AbelPro-Bold.ttf in Resources */,
 				5F8DF8C7252EE32C001DC845 /* LaunchScreen.storyboard in Resources */,
+				5F8B0CDD258A9E9800AAEAAF /* coaches.json in Resources */,
 				5F8DF8C4252EE32C001DC845 /* Assets.xcassets in Resources */,
 				5F8DF8C2252EE329001DC845 /* Main.storyboard in Resources */,
 				5F8DF8EF252F0B9F001DC845 /* Abel-Regular.ttf in Resources */,
@@ -614,6 +648,7 @@
 				5F71B7BE25384572008AB0ED /* ChooseOptionViewController.swift in Sources */,
 				5F0F3E2E2573F318001F2A3E /* Images.swift in Sources */,
 				5F0C5608253746F100F9CEC2 /* WhiteButton.swift in Sources */,
+				5F8B0CD7258A991600AAEAAF /* Coaches.swift in Sources */,
 				5F8B0CCA258A75C500AAEAAF /* ProfileViewController.swift in Sources */,
 				5F8DF8BB252EE329001DC845 /* AppDelegate.swift in Sources */,
 				5F6EC8422582260E00416502 /* SessionDataLoader.swift in Sources */,
@@ -629,6 +664,7 @@
 				5FE8329B254D9C6A0051D411 /* SettingsViewController.swift in Sources */,
 				5F321D902540AE7500ACD0B2 /* SessionViewController.swift in Sources */,
 				5F3040B6255C517F0062C477 /* SessionTableViewCell.swift in Sources */,
+				5F8B0CED258A9F5000AAEAAF /* CoachesViewController.swift in Sources */,
 				5F3040A7255C47AF0062C477 /* SessionTableViewController.swift in Sources */,
 				5F71B8BE253D8F97008AB0ED /* UIView+Extention.swift in Sources */,
 				5F8DF8BD252EE329001DC845 /* SceneDelegate.swift in Sources */,

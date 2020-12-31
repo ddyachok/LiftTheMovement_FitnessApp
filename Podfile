@@ -6,6 +6,7 @@ target 'Fitness_App_Swift' do
   use_frameworks!
 
   # Pods for Fitness_App_Swift
+    pod 'RealmSwift'
   
   # add the Firebase pod for Google Analytics
     pod 'Firebase/Analytics'

@@ -1,0 +1,38 @@
+[
+    {
+        "firstN" : "Pep",
+        "lastN" : "Provino",
+        "age" : 32,
+        "sex" : "Male"
+    },
+    {
+        "firstN" : "Charlotte",
+        "lastN" : "Holmes",
+        "age" : 29,
+        "sex" : "Female"
+    },
+    {
+        "firstN" : "James",
+        "lastN" : "Withers",
+        "age" : 24,
+        "sex" : "Male"
+    },
+    {
+        "firstN" : "Angus",
+        "lastN" : "Lift",
+        "age" : 27,
+        "sex" : "Male"
+    },
+    {
+        "firstN" : "Poppy",
+        "lastN" : "Jay",
+        "age" : 25,
+        "sex" : "Female"
+    },
+    {
+        "firstN" : "Viktor",
+        "lastN" : "Genov",
+        "age" : 33,
+        "sex" : "Male"
+    },
+]

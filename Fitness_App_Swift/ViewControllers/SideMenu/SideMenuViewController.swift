@@ -42,7 +42,7 @@ class SideMenuViewController: UIViewController {
 
 extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,6 +63,8 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         profileVC.modalPresentationStyle = .fullScreen
         let exercisesVC = storyBoard.instantiateViewController(withIdentifier: "ExercisesVC") as! ExercisesViewController
         exercisesVC.modalPresentationStyle = .fullScreen
+        let coachesVC = storyBoard.instantiateViewController(withIdentifier: "CoachesVC") as! CoachesViewController
+        coachesVC.modalPresentationStyle = .fullScreen
         
         if sideMenuModel?.description == "Home" {
             delegate?.showSideMenuViewController(doFolding: true)
@@ -72,6 +74,9 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if sideMenuModel?.description == "Profile" {
             presentVC(profileVC)
+        }
+        if sideMenuModel?.description == "Coaches" {
+            presentVC(coachesVC)
         }
         if sideMenuModel?.description == "About" {
             presentVC(mapVC)

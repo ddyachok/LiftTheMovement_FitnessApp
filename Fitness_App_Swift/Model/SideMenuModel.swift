@@ -11,6 +11,7 @@ enum SideMenuModel: Int, CustomStringConvertible {
     case Home
     case Profile
     case Exercises
+    case Coaches
     case About
     
     var description: String {
@@ -18,6 +19,7 @@ enum SideMenuModel: Int, CustomStringConvertible {
         case .Home: return "Home"
         case .Profile: return "Profile"
         case .Exercises: return "Exercises"
+        case .Coaches: return "Coaches"
         case .About: return "About"
         }
     }

@@ -332,7 +332,11 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.11)
-  - SideMenuSwift (2.0.6)
+  - Realm (10.5.0):
+    - Realm/Headers (= 10.5.0)
+  - Realm/Headers (10.5.0)
+  - RealmSwift (10.5.0):
+    - Realm (= 10.5.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -340,7 +344,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - FirebaseFirestoreSwift
-  - SideMenuSwift (~> 2.0)
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
@@ -363,7 +367,8 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
-    - SideMenuSwift
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -385,8 +390,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
-  SideMenuSwift: f12ca1b11faad909bfc2878df37e0a1c40fa4570
+  Realm: e1c22c3d83b229afb70ebc10e1771c91e9542d12
+  RealmSwift: 6fc078d9d3fd7e58c71bfdbb694e252462f112a5
 
-PODFILE CHECKSUM: 8082b690d7181008f4c33c4314f156afae1b5b4d
+PODFILE CHECKSUM: 81f8dac26461ccafc4fc61dc808646a93cc1f2a1
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0

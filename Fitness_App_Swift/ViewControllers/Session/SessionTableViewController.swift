@@ -10,7 +10,7 @@ import UIKit
 class TableSessionViewController: UIViewController {
     
     var tableView = UITableView()
-    @Published var exercises: [Exercise] = []
+    var exercises: [Exercise] = []
     
     struct Cells {
         static let exerciseCell = "SessionTableViewCell"
@@ -23,6 +23,7 @@ class TableSessionViewController: UIViewController {
         // load data
         exercises = fetchData()
         configureSessionTableView()
+//        parseJSON().self
     }
     
     
@@ -41,6 +42,23 @@ class TableSessionViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+//    func parseJSON() {
+//        if let fileLocation = Bundle.main.url(forResource: "session", withExtension: "json") {
+//
+//            do {
+//                let data = try Data(contentsOf: fileLocation)
+//                let jsonDecoder = JSONDecoder()
+//                let dataFromJson = try jsonDecoder.decode([Exercise].self, from: data)
+//
+//                self.exercises = dataFromJson
+//
+//            } catch  {
+//                print(error)
+//            }
+//
+//        }
+//    }
 
 }
 
