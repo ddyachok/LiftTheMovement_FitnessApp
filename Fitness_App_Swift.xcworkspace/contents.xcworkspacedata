@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Coach+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Coach+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:Fitness_App_Swift.xcodeproj">
    </FileRef>
    <FileRef

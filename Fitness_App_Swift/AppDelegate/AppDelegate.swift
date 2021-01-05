@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,7 +26,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
+    
+    // MARK: - Core Data Stack -
+
+    lazy var persistentContainer: NSPersistentContainer = {
+        // name should be the same as name of the created file
+        let container = NSPersistentContainer(name: "Coaches")
+        container.loadPersistentStores { storeDescription, error in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        
+        return container
+    }()
 
     
 

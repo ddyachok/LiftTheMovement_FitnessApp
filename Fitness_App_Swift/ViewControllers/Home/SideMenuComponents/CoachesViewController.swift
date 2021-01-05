@@ -7,26 +7,35 @@
 
 import UIKit
 
-class CoachesViewController: UIViewController {
-    
-    var tableView = UITableView()
-    var coachesList: [Coaches] = []
-    var currentIndex = 0
-    var fm = FileManager.default
-    var fresult: Bool = false
-    var subUrl: URL?
-    var mainUrl: URL? = Bundle.main.url(forResource: "coaches", withExtension: "json")
-    
-    
+class CoachesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var coachesLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var coachTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var dataSource: [Coach] = []
+    let databaseService: Database = CoreDataService()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Coaches"
-        getData()
+        setupDataSource()
+        setupTableView()
+    }
+    
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    private func setupDataSource() {
+        dataSource = databaseService.fetchObjects(of: Coach.self,
+                                                  sortDescriptor: Sorted(key: "age", ascending: false),
+                                                  predicate: NSPredicate(format: "age > 20"))
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
@@ -47,71 +56,47 @@ class CoachesViewController: UIViewController {
         dismiss(animated: false)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.tableView.reloadData()
-    }
-    
-    func getData() {
-        do {
-            let documentDirectory = try fm.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-            subUrl = documentDirectory.appendingPathComponent("coaches.json")
-            loadFile(mainPath: mainUrl!, subPath: subUrl!)
-        } catch {
-            print(error)
+    @IBAction func addButtonTapped(_ sender: Any) {
+        guard let fName = coachTextField.text, !fName.isEmpty else {
+            return
         }
-    }
-    
-    func loadFile(mainPath: URL, subPath: URL){
-        if fm.fileExists(atPath: subPath.path){
-            decodeData(pathName: subPath)
-            
-            if coachesList.isEmpty{
-                decodeData(pathName: mainPath)
-            }
-            
-        }else{
-            decodeData(pathName: mainPath)
+        
+        guard let newCoach = databaseService.create(type: Coach.self) else {
+            return
         }
-        self.tableView.reloadData()
-    }
-    
-    func decodeData(pathName: URL){
-        do{
-            let jsonData = try Data(contentsOf: pathName)
-            let decoder = JSONDecoder()
-            coachesList = try decoder.decode([Coaches].self, from: jsonData)
-        } catch {}
-    }
-    
-    func alertMessages (){
-        let alert = UIAlertController(title: "Reminder:", message: "No Data has been changed!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        
+        newCoach.fName = fName
+        newCoach.age = Int16.random(in: 18...35)
+        
+        databaseService.saveChanges()
+        dataSource.append(newCoach)
+        tableView.reloadData()
+        
+        coachTextField.text = nil
+        view.endEditing(true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return coachesList.count
+        dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "CellId")
+        let coach = dataSource[indexPath.row]
+        cell.textLabel?.text = coach.fName
         
-        coachesList.sort{$0.firstN < $1.firstN}
+        let starsTextPart = coach.age == 1 ? "year old" : "years old"
+        cell.detailTextLabel?.text = "Age: \(coach.age) \(starsTextPart)"
         
-        cell.textLabel?.text = coachesList[indexPath.row].firstN + " " + coachesList[indexPath.row].lastN
-        
-        cell.textLabel?.textColor = UIColor.white
-        
-        cell.textLabel?.font = UIFont.Abel().regular(with: 20)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        currentIndex = indexPath.row
-        performSegue(withIdentifier: "details", sender: self)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            databaseService.delete(dataSource[indexPath.row])
+            dataSource.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
     }
 
 }
-

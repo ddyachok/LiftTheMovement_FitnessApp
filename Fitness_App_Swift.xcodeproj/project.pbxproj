@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0163DD25A48B5E0010174C /* Coaches.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F0163DB25A48B5E0010174C /* Coaches.xcdatamodeld */; };
+		5F01640725A4B8400010174C /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01640625A4B8400010174C /* Database.swift */; };
+		5F01640C25A4B8730010174C /* DatabaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01640B25A4B8730010174C /* DatabaseObject.swift */; };
+		5F01641125A4B8920010174C /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01641025A4B8920010174C /* CoreDataService.swift */; };
+		5F01641625A4B8B20010174C /* Sorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01641525A4B8B20010174C /* Sorted.swift */; };
 		5F0C5608253746F100F9CEC2 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C5607253746F100F9CEC2 /* WhiteButton.swift */; };
 		5F0C561025379C5B00F9CEC2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C560F25379C5B00F9CEC2 /* SignInViewController.swift */; };
 		5F0C561525379C7200F9CEC2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C561425379C7200F9CEC2 /* SignUpViewController.swift */; };
@@ -27,7 +32,6 @@
 		5F71B8BE253D8F97008AB0ED /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F71B8BD253D8F97008AB0ED /* UIView+Extention.swift */; };
 		5F8B0CCA258A75C500AAEAAF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B0CC9258A75C500AAEAAF /* ProfileViewController.swift */; };
 		5F8B0CCF258A78FE00AAEAAF /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B0CCE258A78FE00AAEAAF /* ExercisesViewController.swift */; };
-		5F8B0CD7258A991600AAEAAF /* Coaches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B0CD6258A991600AAEAAF /* Coaches.swift */; };
 		5F8B0CDD258A9E9800AAEAAF /* coaches.json in Resources */ = {isa = PBXBuildFile; fileRef = 5F8B0CDC258A9E9800AAEAAF /* coaches.json */; };
 		5F8B0CED258A9F5000AAEAAF /* CoachesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8B0CEC258A9F5000AAEAAF /* CoachesViewController.swift */; };
 		5F8DF8BB252EE329001DC845 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8DF8BA252EE329001DC845 /* AppDelegate.swift */; };
@@ -72,6 +76,11 @@
 		226699FA9D35E2F173B92DA8 /* Pods-Fitness_App_Swift-Fitness_App_SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitness_App_Swift-Fitness_App_SwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fitness_App_Swift-Fitness_App_SwiftUITests/Pods-Fitness_App_Swift-Fitness_App_SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		422EBFA667A617E259A40731 /* Pods_Fitness_App_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitness_App_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCEB4AFD89C11BA821A183E /* Pods_Fitness_App_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitness_App_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F0163DC25A48B5E0010174C /* Coaches.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Coaches.xcdatamodel; sourceTree = "<group>"; };
+		5F01640625A4B8400010174C /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		5F01640B25A4B8730010174C /* DatabaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseObject.swift; sourceTree = "<group>"; };
+		5F01641025A4B8920010174C /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		5F01641525A4B8B20010174C /* Sorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorted.swift; sourceTree = "<group>"; };
 		5F0C5607253746F100F9CEC2 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 		5F0C560F25379C5B00F9CEC2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5F0C561425379C7200F9CEC2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +101,6 @@
 		5F71B8BD253D8F97008AB0ED /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		5F8B0CC9258A75C500AAEAAF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5F8B0CCE258A78FE00AAEAAF /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
-		5F8B0CD6258A991600AAEAAF /* Coaches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coaches.swift; sourceTree = "<group>"; };
 		5F8B0CDC258A9E9800AAEAAF /* coaches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coaches.json; sourceTree = "<group>"; };
 		5F8B0CEC258A9F5000AAEAAF /* CoachesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachesViewController.swift; sourceTree = "<group>"; };
 		5F8DF8B7252EE329001DC845 /* Fitness_App_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitness_App_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +157,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F01640525A4B8230010174C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5F01640625A4B8400010174C /* Database.swift */,
+				5F01640B25A4B8730010174C /* DatabaseObject.swift */,
+				5F01641025A4B8920010174C /* CoreDataService.swift */,
+				5F01641525A4B8B20010174C /* Sorted.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		5F0C561E25379CBB00F9CEC2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,7 +284,7 @@
 			children = (
 				5F30409E255C37D90062C477 /* Exercise.swift */,
 				5F6EC8242580E66100416502 /* SideMenuModel.swift */,
-				5F8B0CD6258A991600AAEAAF /* Coaches.swift */,
+				5F0163DB25A48B5E0010174C /* Coaches.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -338,6 +357,7 @@
 			children = (
 				5F8B0CDB258A9A0200AAEAAF /* JSON */,
 				5F0F3E272573F1E5001F2A3E /* AppDelegate */,
+				5F01640525A4B8230010174C /* Database */,
 				5F30409D255C37C60062C477 /* Model */,
 				5F0F3E282573F1F8001F2A3E /* View */,
 				5F0C561E25379CBB00F9CEC2 /* ViewControllers */,
@@ -642,16 +662,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F01641625A4B8B20010174C /* Sorted.swift in Sources */,
 				5F94C3FD257EB74000B68960 /* SideMenuContainerViewController.swift in Sources */,
 				5F0C561525379C7200F9CEC2 /* SignUpViewController.swift in Sources */,
 				5F8DF8BF252EE329001DC845 /* ViewController.swift in Sources */,
 				5F71B7BE25384572008AB0ED /* ChooseOptionViewController.swift in Sources */,
 				5F0F3E2E2573F318001F2A3E /* Images.swift in Sources */,
 				5F0C5608253746F100F9CEC2 /* WhiteButton.swift in Sources */,
-				5F8B0CD7258A991600AAEAAF /* Coaches.swift in Sources */,
 				5F8B0CCA258A75C500AAEAAF /* ProfileViewController.swift in Sources */,
 				5F8DF8BB252EE329001DC845 /* AppDelegate.swift in Sources */,
 				5F6EC8422582260E00416502 /* SessionDataLoader.swift in Sources */,
+				5F0163DD25A48B5E0010174C /* Coaches.xcdatamodeld in Sources */,
 				5F71B7F6253B2B6C008AB0ED /* Constants.swift in Sources */,
 				5FE404B825868DF6007F4F67 /* MapViewController.swift in Sources */,
 				5F0C561025379C5B00F9CEC2 /* SignInViewController.swift in Sources */,
@@ -664,10 +685,13 @@
 				5FE8329B254D9C6A0051D411 /* SettingsViewController.swift in Sources */,
 				5F321D902540AE7500ACD0B2 /* SessionViewController.swift in Sources */,
 				5F3040B6255C517F0062C477 /* SessionTableViewCell.swift in Sources */,
+				5F01641125A4B8920010174C /* CoreDataService.swift in Sources */,
 				5F8B0CED258A9F5000AAEAAF /* CoachesViewController.swift in Sources */,
+				5F01640C25A4B8730010174C /* DatabaseObject.swift in Sources */,
 				5F3040A7255C47AF0062C477 /* SessionTableViewController.swift in Sources */,
 				5F71B8BE253D8F97008AB0ED /* UIView+Extention.swift in Sources */,
 				5F8DF8BD252EE329001DC845 /* SceneDelegate.swift in Sources */,
+				5F01640725A4B8400010174C /* Database.swift in Sources */,
 				5F8B0CCF258A78FE00AAEAAF /* ExercisesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1007,6 +1031,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5F0163DB25A48B5E0010174C /* Coaches.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5F0163DC25A48B5E0010174C /* Coaches.xcdatamodel */,
+			);
+			currentVersion = 5F0163DC25A48B5E0010174C /* Coaches.xcdatamodel */;
+			path = Coaches.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5F8DF8AF252EE329001DC845 /* Project object */;
 }
